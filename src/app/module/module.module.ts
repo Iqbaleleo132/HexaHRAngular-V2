@@ -12,4 +12,6 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     CommonModule
   ]
 })
-export class ModuleModule { }
+export class ModuleModule {
+    
+ }

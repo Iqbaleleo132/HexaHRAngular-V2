@@ -7,6 +7,7 @@ import { SharedModule } from './shared/shared.module';
 import { ModuleModule } from './module/module.module';
 import { DefaultModule } from './default/default.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     SharedModule,
     ModuleModule,
     DefaultModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     NgbModule
   ],

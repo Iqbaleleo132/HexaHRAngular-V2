@@ -1,0 +1,64 @@
+.btn-class{
+    background-color: #204683;
+    width: 5vw;
+    height: 5vh;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    transition: ease 0.3s;
+}
+.btn-class:hover{
+background-color: black;
+transition: ease 0.3s;
+}
+.brand{
+    font-size: 25px;
+    font-weight: 700;
+    color: #204683;
+}
+span{
+    color: rgb(255, 0, 0);
+}
+
+.side{
+    list-style: none;
+    text-decoration: none;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    
+}
+
+.content:hover{
+    border-radius: 5px;
+    background-color:rgba(255, 255, 255, 0.384);
+}
+.content-list{
+    padding: 1rem;
+    margin-top: 0.1rem;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    height: 100%;
+    background-color: rgb(46, 46, 46);   
+}
+.content .menu-toggler{
+    padding: 10px;
+    cursor: pointer;
+    color: white;
+}
+
+.menu .menu-items{
+    color: white;
+    padding: 5px;
+    margin-left: 25px ;
+    margin-bottom: 5px;
+}
+.btn-main{
+    width: 100%;
+    background-color: var(--main-color);
+    color: white;
+}
+
+
+
+

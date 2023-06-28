@@ -12,26 +12,42 @@
     </ng-template>
     <ng-template pTemplate="content">
       
-     <div class="menu-default">
-      <div class="btn btn-main"><div class="d-flex gap-4"><div><i class="pi pi-home"></i></div>Dashboard</div></div>
+     <div class="menu-default mt-1">
+      <div class="btn btn-main" routerLink="/hexahr-home/dashboard"><div class="d-flex gap-4"><div><i class="pi pi-home"></i></div>Dashboard</div></div>
      </div>
-    <div class="wrap-toggler">          
+    <div class="wrap-toggler mt-2">          
       <div class="menu-toggler" class="btn btn-main" routerLink="/hexahr-home/dashboard" (click)="toggleMenu()"><div class="d-flex gap-4"><div><i class="pi pi-box"></i></div><div>Master Data</div><div class="upside-down"><i class="pi pi-angle-down"></i></div></div></div>
           <div class="menu" *ngIf="isMenuOpened">
             <div class="content-list">
             <div class="content">
-            <div class="menu-items"><i class="pi "></i>Aproval Izin dan Lembur</div>
+            <div class="menu-items" routerLink="aproval"><i class="pi "></i>Aproval Izin dan Lembur</div>
             </div>
             <div class="content">
-            <div class="menu-items"><i class=""></i>Jabatan</div>
+            <div class="menu-items" routerLink="jabatan"><i class=""></i>Jabatan</div>
           </div>
             <div class="content">
-            <div class="menu-items"><i class=""></i>Karyawan</div>
-        </div>
+            <div class="menu-items" routerLink="karyawan"><i class=""></i>Karyawan</div>
+            </div>
+            <div class="content">
+              <div class="menu-items" routerLink=""><i class="pi "></i>Rekap Absensi</div>
+            </div>
+            <div class="content">
+              <div class="menu-items" routerLink="laporan"><i class="pi "></i>Laporan Absensi</div>
+              </div>
       </div>
      </div>
     </div>
+    <div class="menu-default mt-2">
+      <div class="btn btn-main"><div class="d-flex gap-4"><div><i class="pi pi-user"></i></div>Profile</div></div>
+    </div>
+    <div class="menu-default mt-2">
+      <div class="btn btn-main"><div class="d-flex gap-4"><div><i class="pi pi-sign-out"></i></div>Logout</div></div>
+    </div>
     </ng-template>
-    <ng-template pTemplate="footer"></ng-template>
+    <ng-template pTemplate="footer">
+      <div class="container">
+        <h6>Hexa<span>HR</span></h6>
+      </div>
+    </ng-template>
 </p-sidebar>
 <button (click)="sidebarVisible = true" class="btn-class pi pi-list"></button>

@@ -61,7 +61,7 @@ span{
     margin-bottom: 5px;
     cursor: pointer;
     border-radius: 5px;
-}
+} 
 
 .menu .menu-items:hover{
     color: white;
@@ -82,12 +82,15 @@ span{
 
 .wrap-toggler .upside-down{
     line-height: 10px;
-    margin-left: 80px;
+    margin-left: 87px;
     margin-top: 5px;
 }
 
+h6{
+    color: var(--main-color);
+}
 
-
-
-
-
+span{
+    color: rgb(255, 0, 0);
+    font-weight: 100px;
+}

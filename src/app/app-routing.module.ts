@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DefaultComponent } from './default/default/default.component';
 import { DashboardComponent } from './module/dashboard/dashboard.component';
 
+
 const routes: Routes = [
   {
     path: 'hexahr-home',

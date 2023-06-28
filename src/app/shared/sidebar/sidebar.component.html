@@ -11,24 +11,27 @@
      </div>
     </ng-template>
     <ng-template pTemplate="content">
-     
-       
-        <div class="menu-toggler" class="btn btn-main" routerLink="/hexahr-home/dashboard" (click)="toggleMenu()"><div class="d-flex gap-4"><div><i class="pi pi-home"></i></div><div>Dashboard</div></div></div>
+      
+     <div class="menu-default">
+      <div class="btn btn-main"><div class="d-flex gap-4"><div><i class="pi pi-home"></i></div>Dashboard</div></div>
+     </div>
+    <div class="wrap-toggler">          
+      <div class="menu-toggler" class="btn btn-main" routerLink="/hexahr-home/dashboard" (click)="toggleMenu()"><div class="d-flex gap-4"><div><i class="pi pi-box"></i></div><div>Master Data</div><div class="upside-down"><i class="pi pi-angle-down"></i></div></div></div>
           <div class="menu" *ngIf="isMenuOpened">
             <div class="content-list">
             <div class="content">
-            <div class="menu-items"><i class=""></i>Menu</div>
+            <div class="menu-items"><i class="pi "></i>Aproval Izin dan Lembur</div>
             </div>
             <div class="content">
-            <div class="menu-items"><i class=""></i>Menu</div>
+            <div class="menu-items"><i class=""></i>Jabatan</div>
           </div>
             <div class="content">
-            <div class="menu-items"><i class=""></i>Menu</div>
+            <div class="menu-items"><i class=""></i>Karyawan</div>
         </div>
-        </div>
-        
+      </div>
      </div>
+    </div>
     </ng-template>
-    <ng-template pTemplate="footer">Beta version v1.0.0</ng-template>
+    <ng-template pTemplate="footer"></ng-template>
 </p-sidebar>
 <button (click)="sidebarVisible = true" class="btn-class pi pi-list"></button>

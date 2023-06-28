@@ -8,6 +8,7 @@ import { ModuleModule } from './module/module.module';
 import { DefaultModule } from './default/default.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { Card, CardModule } from 'primeng/card';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     DefaultModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    CardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

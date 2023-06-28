@@ -10,3 +10,44 @@
     flex-direction: column;
     width: calc(100%/3);
 }
+
+.content-card {
+    justify-content: space-between;
+    display: flex;
+}
+.header-top{
+    font-weight: 700;
+    font-size: 30px;
+}
+.icon{
+    font-size: 1.5rem;
+    display: flex;
+    gap: 10px;
+}
+.font-karyawan{
+    font-size: 15px;
+    font-weight: 600;
+}
+.cards-content{
+    width: calc(100%/2);
+    margin-top: 1rem;
+    flex-direction: column;
+}
+.side-content{
+    margin-top: 20px;
+    justify-content: space-between;
+    gap: 10px;
+}
+.cards-content-user{
+    width: 50%;
+    border-radius: 10px;
+}
+.cards-content-donuts{
+    width: 100%;
+    border-radius: 10px;
+}
+::ng-deep .p-card{
+    border: 0.5px solid rgba(136, 136, 136, 0.432);
+    height: 100%;
+    box-shadow:  5px 5px 2px 0px rgba(170, 170, 170, 0.288);
+}

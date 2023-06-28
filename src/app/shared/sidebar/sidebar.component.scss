@@ -19,6 +19,13 @@ transition: ease 0.3s;
 span{
     color: rgb(255, 0, 0);
 }
+.menu-toggler .d-flex {
+    justify-content: flex-end;
+}
+  
+  .menu-toggler .d-flex .upside-down {
+    order: 1;
+  }
 
 .side{
     list-style: none;
@@ -37,27 +44,49 @@ span{
     padding: 1rem;
     margin-top: 0.1rem;
     margin-bottom: 10px;
-    border-radius: 5px;
+    border-radius: 2px 2px 0px 0px;
     height: 100%;
-    background-color: rgb(46, 46, 46);   
+    background-color: #F5F5F5;   
 }
 .content .menu-toggler{
-    padding: 10px;
+    padding: 15px;
     cursor: pointer;
     color: white;
 }
 
 .menu .menu-items{
-    color: white;
+    color: var(--main-color);
     padding: 5px;
-    margin-left: 25px ;
+    align-items: center;
     margin-bottom: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.menu .menu-items:hover{
+    color: white;
+    background: var(--main-color);
+    padding: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
 }
 .btn-main{
     width: 100%;
-    background-color: var(--main-color);
+    color: var(--main-color);
+}
+.btn-main:hover{
+    width: 100%;
+    background: #1B3A6F;
     color: white;
 }
+
+.wrap-toggler .upside-down{
+    line-height: 10px;
+    margin-left: 80px;
+    margin-top: 5px;
+}
+
+
 
 
 

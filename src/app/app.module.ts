@@ -9,18 +9,12 @@ import { DefaultModule } from './default/default.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Card, CardModule } from 'primeng/card';
-import { JabatanComponent } from './jabatan/jabatan.component';
-import { KaryawanComponent } from './karyawan/karyawan.component';
-import { AprovalComponent } from './aproval/aproval.component';
-import { LaporabsensiComponent } from './laporabsensi/laporabsensi.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    JabatanComponent,
-    KaryawanComponent,
-    AprovalComponent,
-    LaporabsensiComponent
+
   ],
   imports: [
     BrowserModule,

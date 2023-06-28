@@ -7,7 +7,11 @@ import { JabatanComponent } from './jabatan/jabatan.component';
 import { KaryawanComponent } from './karyawan/karyawan.component';
 import { AprovalComponent } from './aproval/aproval.component';
 import { LaporabsenComponent } from './laporabsen/laporabsen.component';
-
+import { DividerModule } from 'primeng/divider';
+import { AvatarModule } from 'primeng/avatar';
+import { ButtonModule } from 'primeng/button';
+import { ScrollerModule } from 'primeng/scroller';
+import { BadgeModule } from 'primeng/badge';
 
 @NgModule({
   declarations: [
@@ -19,8 +23,13 @@ import { LaporabsenComponent } from './laporabsen/laporabsen.component';
   ],
   imports: [
     CommonModule,
+    AvatarModule,
     CardModule,
-    ChartModule
+    ChartModule,
+    DividerModule,
+    ButtonModule,
+    ScrollerModule,
+    BadgeModule
   ]
 })
 export class ModuleModule {

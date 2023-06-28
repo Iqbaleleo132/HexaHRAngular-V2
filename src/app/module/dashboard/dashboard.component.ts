@@ -12,9 +12,13 @@ export class DashboardComponent {
 
   options: any;
 
+  items!: string[];
+
+
   ngOnInit() {
       const documentStyle = getComputedStyle(document.documentElement);
       const textColor = documentStyle.getPropertyValue('--text-color');
+      this.items = Array.from({ length: 1000 }).map((_, i) => `Item #${i}`);
 
       this.data = {
           labels: ['Dikeluarkan', 'Resign', 'Tetap','izin','kontrak'],

@@ -16,7 +16,7 @@
       <div class="btn btn-main" routerLink="/hexahr-home/dashboard"><div class="d-flex gap-4"><div><i class="pi pi-home"></i></div>Dashboard</div></div>
      </div>
     <div class="wrap-toggler mt-2">          
-      <div class="menu-toggler" class="btn btn-main" routerLink="/hexahr-home/dashboard" (click)="toggleMenu()"><div class="d-flex gap-4"><div><i class="pi pi-box"></i></div><div>Master Data</div><div class="upside-down"><i class="pi pi-angle-down"></i></div></div></div>
+      <div class="menu-toggler" class="btn btn-main"  (click)="toggleMenu()"><div class="d-flex gap-4"><div><i class="pi pi-box"></i></div><div>Master Data</div><div class="upside-down"><i class="pi pi-angle-down"></i></div></div></div>
           <div class="menu" *ngIf="isMenuOpened">
             <div class="content-list">
             <div class="content">
@@ -27,9 +27,6 @@
             </div>
             <div class="content">
             <div class="menu-items" routerLink="karyawan"><i class=""></i>Karyawan</div>
-            </div>
-            <div class="content">
-              <div class="menu-items" routerLink=""><i class="pi "></i>Rekap Absensi</div>
             </div>
             <div class="content">
               <div class="menu-items" routerLink="laporan"><i class="pi "></i>Laporan Absensi</div>

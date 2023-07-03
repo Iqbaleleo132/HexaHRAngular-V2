@@ -12,6 +12,8 @@ import { AvatarModule } from 'primeng/avatar';
 import { ButtonModule } from 'primeng/button';
 import { ScrollerModule } from 'primeng/scroller';
 import { BadgeModule } from 'primeng/badge';
+import { PaginatorModule } from 'primeng/paginator';
+import { TableModule } from 'primeng/table';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,7 @@ import { BadgeModule } from 'primeng/badge';
     JabatanComponent,
     KaryawanComponent,
     AprovalComponent,
-    LaporabsenComponent
+    LaporabsenComponent,
   ],
   imports: [
     CommonModule,
@@ -29,7 +31,9 @@ import { BadgeModule } from 'primeng/badge';
     DividerModule,
     ButtonModule,
     ScrollerModule,
-    BadgeModule
+    BadgeModule,
+    PaginatorModule,
+    TableModule
   ]
 })
 export class ModuleModule {

@@ -1,0 +1,45 @@
+::ng-deep .p-card{
+    border: 0.5px solid rgba(136, 136, 136, 0.432);
+    height: 100%;
+    box-shadow:  5px 5px 2px 0px rgba(170, 170, 170, 0.288);
+}
+
+.input-text input{
+    border: 0.3px solid grey;
+    border-radius: 5px;
+    transition: ease 0.3s;
+    height: 35px;
+    width: 150px;
+    margin-bottom: 30px;
+    
+}
+.input-text input:hover{
+    border: 1px solid var(--main-color);
+    border-radius: 5px;
+    
+}
+::ng-deep p-table .header{
+    background-color: var(--main-color);
+}
+
+span{
+    margin-bottom: 50px;
+}
+
+thead{
+    background-color: var(--main-color);
+}
+
+  thead{
+    background-color: var(--main-color);
+  }
+
+  .input-text input{
+    padding: 10px;
+    margin: 5px;
+
+
+  }
+
+
+

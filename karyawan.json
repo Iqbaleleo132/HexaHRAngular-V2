@@ -1,0 +1,42 @@
+{
+    "employee":[
+        {
+            "id":1,
+            "foto":"MangEak.jpg",
+            "name":"John",
+            "masa_kontrak":"",
+             "jabatan":30,
+              "status":"New York",
+              "group":"New York"
+            },
+        {
+            "id":2,
+            "foto":"MangEak.jpg",
+            "name":"John",
+            "masa_kontrak":"",
+             "jabatan":30,
+              "status":"New York",
+              "group":"New York"
+            },
+        {
+            "id":3,
+            "foto":"MangEak.jpg",
+            "name":"John",
+            "masa_kontrak":"",
+             "jabatan":30,
+              "status":"New York",
+              "group":"New York"
+            },
+        {
+            "id":4,
+            "foto":"MangEak.jpg",
+            "name":"John",
+            "masa_kontrak":"",
+             "jabatan":30,
+              "status":"New York",
+              "group":"New York"
+            }
+            
+    ]
+  
+    }

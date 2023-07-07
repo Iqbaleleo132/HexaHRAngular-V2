@@ -1,4 +1,38 @@
-<p-card>
-    JDNAJSN
-</p-card>
+<div class="card">
+    <div class="input-text">
+        <span class="container">
+
+        
+
+            <label htmlFor="username">Username</label>
+            <input pInputText id="username" type="email" class="form-control">
+        </span> 
+        <p-card>
+            <p-table class="table"[tableStyle]="{ 'min-width': '50rem' }" [paginator]="true" [rowsPerPageOptions]="[15, 25, 50, 100, 250, 500]"
+            [scrollable]="true"
+            [rows]="15" [resizableColumns]="true">
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th>No</th>
+                        <th>Profile</th>
+                        <th>Nama Karyawan</th>
+                        <th>Masa Kontrak</th>
+                        <th>Jabatan</th>
+                        <th>Status</th>
+                        <th>Group</th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" *ngFor="let data of karyawan; let i=index">
+                    <tr>
+                        <td>{{i+1}}</td>
+                        <td>{{data.foto}}</td>
+                        <td>{{data.name}}</td>
+                        <td>{{data.jabatam}}</td>
+                    </tr>
+                </ng-template>
+            </p-table>
+            </p-card>
+            
+    </div>
+</div>
 

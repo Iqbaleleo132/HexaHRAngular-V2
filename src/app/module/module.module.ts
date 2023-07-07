@@ -14,6 +14,8 @@ import { ScrollerModule } from 'primeng/scroller';
 import { BadgeModule } from 'primeng/badge';
 import { PaginatorModule } from 'primeng/paginator';
 import { TableModule } from 'primeng/table';
+import { TabViewModule } from 'primeng/tabview';
+import { DecimalPipe, NgFor } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -29,11 +31,14 @@ import { TableModule } from 'primeng/table';
     CardModule,
     ChartModule,
     DividerModule,
+    TabViewModule,
     ButtonModule,
     ScrollerModule,
     BadgeModule,
     PaginatorModule,
-    TableModule
+    TableModule,
+    DecimalPipe,
+    NgFor
   ]
 })
 export class ModuleModule {

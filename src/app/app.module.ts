@@ -9,6 +9,8 @@ import { DefaultModule } from './default/default.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Card, CardModule } from 'primeng/card';
+import { InputTextModule } from 'primeng/inputtext';
+import {  HttpClientModule  } from '@angular/common/http'
 
 
 @NgModule({
@@ -24,7 +26,9 @@ import { Card, CardModule } from 'primeng/card';
     BrowserAnimationsModule,
     AppRoutingModule,
     NgbModule,
-    CardModule
+    CardModule,
+    InputTextModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

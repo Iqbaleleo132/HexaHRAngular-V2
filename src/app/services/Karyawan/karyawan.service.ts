@@ -5,6 +5,8 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class KaryawanService {
+
+
   constructor(private http:HttpClient) { }
 
   getData(){

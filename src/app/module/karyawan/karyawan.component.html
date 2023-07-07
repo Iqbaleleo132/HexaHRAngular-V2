@@ -8,9 +8,13 @@
             <input pInputText id="username" type="email" class="form-control">
         </span> 
         <p-card>
-            <p-table class="table"[tableStyle]="{ 'min-width': '50rem' }" [paginator]="true" [rowsPerPageOptions]="[15, 25, 50, 100, 250, 500]"
-            [scrollable]="true"
-            [rows]="15" [resizableColumns]="true">
+            <p-table  [value]="karyawan"
+            [paginator]="true"
+            [rows]="5"
+            [showCurrentPageReport]="true"
+            [tableStyle]="{ 'min-width': '50rem' }"
+            currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+            [rowsPerPageOptions]="[10, 25, 50]">
                 <ng-template pTemplate="header">
                     <tr>
                         <th>No</th>
@@ -22,12 +26,15 @@
                         <th>Group</th>
                     </tr>
                 </ng-template>
-                <ng-template pTemplate="body" *ngFor="let data of karyawan; let i=index">
+                <ng-template pTemplate="body"  let-karyawan>
                     <tr>
-                        <td>{{i+1}}</td>
-                        <td>{{data.foto}}</td>
-                        <td>{{data.name}}</td>
-                        <td>{{data.jabatam}}</td>
+                        <td>{{karyawan.id}}</td>
+                        <td>{{karyawan.foto}}</td>
+                        <td>{{karyawan.name}}</td>
+                        <td>{{karyawan.masa_kontrak}}</td>
+                        <td>{{karyawan.jabatan}}</td>
+                        <td>{{karyawan.status}}</td>
+                        <td>{{karyawan.group}}</td>
                     </tr>
                 </ng-template>
             </p-table>

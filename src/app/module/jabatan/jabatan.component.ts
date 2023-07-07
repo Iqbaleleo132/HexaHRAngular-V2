@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./jabatan.component.scss']
 })
 export class JabatanComponent {
-
+  
 }

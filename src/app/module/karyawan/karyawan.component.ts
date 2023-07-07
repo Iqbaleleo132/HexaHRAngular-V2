@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import { DecimalPipe, NgFor } from '@angular/common';
 import { KaryawanService } from 'src/app/services/Karyawan/karyawan.service';
+import { take } from 'rxjs';
 
 interface Karyawan {
 	id: number;
@@ -17,16 +18,18 @@ interface Karyawan {
   
   styleUrls: ['./karyawan.component.scss']
 })
-export class KaryawanComponent {
+export class KaryawanComponent implements OnInit {
   karyawan:any
   constructor( private user:KaryawanService) {
-    
-    this.user.getData().subscribe(karyawan => {
+  }
+  ngOnInit(): void{
+    this.user.getData()
+    .pipe(take(1))
+    .subscribe(karyawan => {
       console.log(karyawan)
-      this.karyawan=karyawan;
+      this.karyawan=karyawan
     })
-
-    
+      
   }
 
 

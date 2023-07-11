@@ -1,44 +1,123 @@
 <div class="card">
     <div class="input-text">
-        <span class="container">
-
+     <p-card>
         
+<div class="card">
+    <p-table
+        #dt1
+        [value]="karyawan"
+        dataKey="id"
+        [rows]="5"
+        [showCurrentPageReport]="true"
+        [rowsPerPageOptions]="[5, 15, 50]"
+        [paginator]="true"
+        
+        selectionMode="single"
+        currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+     
+        >
+        <ng-template pTemplate="caption">
+            <div class="d-flex justify-content-end mb-2">
+                <div class="add_button">
+                <p-button (click)="showDialog()" label="Tambah Data"></p-button>
+                <p-dialog header="Tambah Data Karyawan"  [(visible)]="visible" [modal]="true" [style]="{ width: '50vw' }" [ngStyle]="{background:'var(--main-color)'}" [draggable]="false" [resizable]="false">
+                    <p class="m-0">
+                        
+                </p-dialog>
+                </div>
+            </div>
+            <div class="flex">
+                <div class="d-flex justify-content-between">
+                <div class="">
+                <button pButton label="Clear" class="p-button-outlined" icon="pi pi-filter-slash" (click)="clear(karyawan)"></button>
+                </div>
+                <div class="d-flex gap-3">
 
-            <label htmlFor="username">Username</label>
-            <input pInputText id="username" type="email" class="form-control">
-        </span> 
-        <p-card>
-            <p-table  [value]="karyawan"
-            [paginator]="true"
-            [rows]="5"
-            [showCurrentPageReport]="true"
-            [tableStyle]="{ 'min-width': '50rem' }"
-            currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
-            [rowsPerPageOptions]="[10, 25, 50]">
-                <ng-template pTemplate="header">
-                    <tr>
-                        <th>No</th>
-                        <th>Profile</th>
-                        <th>Nama Karyawan</th>
-                        <th>Masa Kontrak</th>
-                        <th>Jabatan</th>
-                        <th>Status</th>
-                        <th>Group</th>
-                    </tr>
-                </ng-template>
-                <ng-template pTemplate="body"  let-karyawan>
-                    <tr>
-                        <td>{{karyawan.id}}</td>
-                        <td>{{karyawan.foto}}</td>
-                        <td>{{karyawan.name}}</td>
-                        <td>{{karyawan.masa_kontrak}}</td>
-                        <td>{{karyawan.jabatan}}</td>
-                        <td>{{karyawan.status}}</td>
-                        <td>{{karyawan.group}}</td>
-                    </tr>
-                </ng-template>
-            </p-table>
-            </p-card>
+                <div class="search-field">
+                    <i class="pi pi-search"></i>
+                    <input  type="text" pInputText placeholder="Cari Karyawan"  />
+                </div>
+            </div>
+            
+        </div>
+       
+            
+            </div>
+        </ng-template>
+        
+        <ng-template pTemplate="header">
+            <tr>
+                <th style="min-width:1rem">
+                    <div class="flex align-items-center">
+                        No
+                    </div>
+                </th>
+                <th style="min-width:5rem">
+                    <div class="flex align-items-center">
+                        Foto
+                    </div>
+                </th>
+                <th style="min-width:15rem">
+                    <div class="flex align-items-center">
+                        Karyawan
+                    </div>
+                </th>
+                <th style="min-width:10rem">
+                    <div class="flex align-items-center">
+                        Masa Kontrak
+                    </div>
+                </th>
+                <th style="min-width:10rem">
+                    <div class="flex align-items-center">
+                        Jabatan
+                    </div>
+                </th>
+                <th style="min-width:10rem">
+                    <div class="flex align-items-center">
+                        Status
+                    </div>
+                </th>
+                <th style="min-width:10rem">
+                    <div class="flex align-items-center">
+                        Group
+                    </div>
+                </th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" [pSelectableRow]="karyawan" let-karyawan let-rowIndex="rowIndex" >
+            <tr>
+                <td>
+                    {{rowIndex}}
+                </td>
+                <td>
+                    <img src="{{karyawan.url}}" class="rounded-5" alt="Profile"  style="width: 50px" />
+                </td>
+                <td>
+                    {{karyawan.nama}}
+                </td>
+                <td>
+                    {{ karyawan.masakontrak }}
+                </td>
+                <td>
+                    {{ karyawan.jabatan}}
+                </td>
+                <td>
+                    {{ karyawan.status }}
+                </td>
+                <td>
+                    {{ karyawan.penempatan }}
+                </td>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="emptymessage">
+            <tr>
+                <td colspan="10">Karyawan Tidak Ditemukan.</td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
+     </p-card>
+           
             
     </div>
 </div>

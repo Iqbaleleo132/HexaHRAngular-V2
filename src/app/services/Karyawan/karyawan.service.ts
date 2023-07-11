@@ -10,7 +10,7 @@ export class KaryawanService {
   constructor(private http:HttpClient) { }
 
   getData(){
-    return this.http.get('http://localhost:3000/employee')
+    return this.http.get('http://192.168.1.29:5000/karyawans')
   }
 
 }

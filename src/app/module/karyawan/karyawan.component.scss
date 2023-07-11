@@ -34,12 +34,24 @@ thead{
     background-color: var(--main-color);
   }
 
-  .input-text input{
-    padding: 10px;
-    margin: 5px;
+.search-field i {
+    width: 0.10px;
+    position: relative;
+    z-index: 1;
+    line-height: 10px;
+    left: 13rem;
+    
+}
+.search-field input{
+   width: 15rem;
+   height: 3rem;
+  
+    
+}
 
-
-  }
+.add_button{
+    
+}
 
 
 

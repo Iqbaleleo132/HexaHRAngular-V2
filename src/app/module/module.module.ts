@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Input, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CardModule } from 'primeng/card';
@@ -16,6 +16,8 @@ import { PaginatorModule } from 'primeng/paginator';
 import { TableModule } from 'primeng/table';
 import { TabViewModule } from 'primeng/tabview';
 import { DecimalPipe, NgFor } from '@angular/common';
+import { InputTextModule } from 'primeng/inputtext';
+import { DialogModule } from 'primeng/dialog';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { DecimalPipe, NgFor } from '@angular/common';
     PaginatorModule,
     TableModule,
     DecimalPipe,
-    NgFor
+    NgFor,
+    InputTextModule,
+    DialogModule
   ]
 })
 export class ModuleModule {

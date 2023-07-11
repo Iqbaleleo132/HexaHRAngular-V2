@@ -18,10 +18,11 @@
         >
         <ng-template pTemplate="caption">
             <div class="d-flex justify-content-end mb-2">
-                <div class="add_button">
-                <p-button (click)="showDialog()" label="Tambah Data"></p-button>
-                <p-dialog header="Tambah Data Karyawan"  [(visible)]="visible" [modal]="true" [style]="{ width: '50vw' }" [ngStyle]="{background:'var(--main-color)'}" [draggable]="false" [resizable]="false">
-                    <p class="m-0">
+                <div class="add-button">
+                <p-dialog  [(visible)]="visible" [modal]="true" [style]="{ width: '50vw' }" [ngStyle]="{background:'var(--main-color)'}" [draggable]="false" [resizable]="false">
+                 <p-header >
+                    Karyawan
+                 </p-header>
                         
                 </p-dialog>
                 </div>
@@ -29,7 +30,8 @@
             <div class="flex">
                 <div class="d-flex justify-content-between">
                 <div class="">
-                <button pButton label="Clear" class="p-button-outlined" icon="pi pi-filter-slash" (click)="clear(karyawan)"></button>
+                <!-- <button pButton label="Clear" class="p-button-outlined" icon="pi pi-filter-slash" (click)="clear(karyawan)"></button> -->
+                <p-button (click)="showDialog()" label="Info Karyawan"></p-button>
                 </div>
                 <div class="d-flex gap-3">
 

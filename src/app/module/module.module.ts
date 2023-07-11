@@ -18,6 +18,9 @@ import { TabViewModule } from 'primeng/tabview';
 import { DecimalPipe, NgFor } from '@angular/common';
 import { InputTextModule } from 'primeng/inputtext';
 import { DialogModule } from 'primeng/dialog';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { ToastModule } from 'primeng/toast';
 
 @NgModule({
   declarations: [
@@ -26,6 +29,8 @@ import { DialogModule } from 'primeng/dialog';
     KaryawanComponent,
     AprovalComponent,
     LaporabsenComponent,
+    LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     CommonModule,
@@ -42,7 +47,8 @@ import { DialogModule } from 'primeng/dialog';
     DecimalPipe,
     NgFor,
     InputTextModule,
-    DialogModule
+    DialogModule,
+    ToastModule
   ]
 })
 export class ModuleModule {

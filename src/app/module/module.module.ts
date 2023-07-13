@@ -19,8 +19,10 @@ import { DecimalPipe, NgFor } from '@angular/common';
 import { InputTextModule } from 'primeng/inputtext';
 import { DialogModule } from 'primeng/dialog';
 import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
 import { ToastModule } from 'primeng/toast';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { RegisterComponent } from './register/register.component';
+
 
 @NgModule({
   declarations: [
@@ -31,6 +33,7 @@ import { ToastModule } from 'primeng/toast';
     LaporabsenComponent,
     LoginComponent,
     RegisterComponent,
+    
   ],
   imports: [
     CommonModule,
@@ -48,7 +51,10 @@ import { ToastModule } from 'primeng/toast';
     NgFor,
     InputTextModule,
     DialogModule,
-    ToastModule
+    ToastModule,
+    NgbModule
+    
+    
   ]
 })
 export class ModuleModule {

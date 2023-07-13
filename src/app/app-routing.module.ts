@@ -7,6 +7,9 @@ import { JabatanComponent } from './module/jabatan/jabatan.component';
 import { KaryawanComponent } from './module/karyawan/karyawan.component';
 import { LaporabsenComponent } from './module/laporabsen/laporabsen.component';
 import { LoginComponent } from './module/login/login.component';
+import { RegisterComponent } from './module/register/register.component';
+
+
 
 
 const routes: Routes = [
@@ -36,11 +39,18 @@ const routes: Routes = [
       },
     ]
   },
+  
   {
-
   path: 'login',
   component: LoginComponent,
+  },
+  {
+    path: 'register',
+    component: RegisterComponent
   }
+  
+
+
 
 ];
 

@@ -22,6 +22,12 @@ import { LoginComponent } from './login/login.component';
 import { ToastModule } from 'primeng/toast';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RegisterComponent } from './register/register.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BreadcrumbModule } from 'primeng/breadcrumb';
+import { DropdownModule } from 'primeng/dropdown';
+import { ProfileComponent } from './profile/profile.component';
+import { SplitterModule } from 'primeng/splitter';
+
 
 
 @NgModule({
@@ -33,6 +39,7 @@ import { RegisterComponent } from './register/register.component';
     LaporabsenComponent,
     LoginComponent,
     RegisterComponent,
+    ProfileComponent,
     
   ],
   imports: [
@@ -52,7 +59,14 @@ import { RegisterComponent } from './register/register.component';
     InputTextModule,
     DialogModule,
     ToastModule,
-    NgbModule
+    NgbModule,
+    FormsModule,
+    ReactiveFormsModule,
+    BreadcrumbModule,
+    DropdownModule,
+    SplitterModule
+    
+    
     
     
   ]

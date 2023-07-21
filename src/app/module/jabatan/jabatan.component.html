@@ -1,2 +1,62 @@
-
-
+<div class="card card-jabatan shadow">
+    <div class="container">
+    <div class="header-jabatan">
+    Jabatan
+        <p-breadcrumb></p-breadcrumb>
+</div>
+</div>
+</div>
+<p-card>
+    <div class="d-flex flex-jabatan">
+    <div></div>
+    <div>
+        <p-button class="" (click)="showDialog()" label="Tambah Data"></p-button>
+        <p-dialog header="Form Tambah Data"[(visible)]="visible" [modal]="true" [style]="{ width: '40vw', height:'28vw'}"[draggable]="false" [resizable]="false" styleClass="blue-header">
+            <label htmlFor="jabatan">Pilih Jabatan :</label>
+         <div class="input-jabatan">
+        <p-dropdown [options]=""  optionLabel="name"></p-dropdown>   
+        </div>   
+            <label htmlFor="jabatan">Pekerjaan :</label>
+         <div class="input-jabatan">
+        <p-dropdown   optionLabel="name"></p-dropdown>   
+        </div>   
+        <div>
+            <p-button class="btn-submit"  label="Submit" icon="pi pi-check" iconPos="right"></p-button>
+        </div>
+                </p-dialog>
+            </div> 
+        </div>
+<p-table class="table" 
+[scrollable]=""
+[rows]="" [resizableColumns]="">
+    <ng-template pTemplate="header">
+        <tr>
+            <th style="min-width:15rem">
+             <div class="flex align-item-center">  
+                No
+            </div> 
+            </th>
+            <th style="min-width:18rem">
+            <div class="flex align-item-center">
+                Jabatan
+            </div>
+            </th>
+            <th style="min-width:18rem">
+            <div class="flex align-item-center">
+                Pekerjaan
+            </div>
+            </th>
+            <th style="min-width:10rem">
+            <div class="flex align-item-center">
+                Aksi
+            </div>
+            </th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-product>
+        <tr>
+            
+        </tr>
+    </ng-template>
+</p-table>
+</p-card>

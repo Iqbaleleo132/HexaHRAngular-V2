@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
@@ -22,6 +22,7 @@ import {  HttpClientModule  } from '@angular/common/http'
     BrowserModule,
     SharedModule,
     ModuleModule,
+    NgbDropdownModule,
     DefaultModule,
     BrowserAnimationsModule,
     AppRoutingModule,

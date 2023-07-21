@@ -38,11 +38,6 @@ index: number | undefined
   }
   ngOnInit(): void{
     this.user.getData()
-    .pipe(take(1))
-    .subscribe(karyawan => {
-      console.log(karyawan)
-      this.karyawan=karyawan
-    })
       
   }
  

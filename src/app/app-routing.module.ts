@@ -8,6 +8,7 @@ import { KaryawanComponent } from './module/karyawan/karyawan.component';
 import { LaporabsenComponent } from './module/laporabsen/laporabsen.component';
 import { LoginComponent } from './module/login/login.component';
 import { RegisterComponent } from './module/register/register.component';
+import { ProfileComponent } from './module/profile/profile.component';
 
 
 
@@ -37,6 +38,10 @@ const routes: Routes = [
         path: 'laporan',
         component: LaporabsenComponent
       },
+      {
+        path: 'profile',
+        component: ProfileComponent
+      },
     ]
   },
   
@@ -47,7 +52,8 @@ const routes: Routes = [
   {
     path: 'register',
     component: RegisterComponent
-  }
+  },
+  
   
 
 

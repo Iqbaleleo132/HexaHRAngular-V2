@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { ToastrService } from 'ngx-toastr';
 import { AuthService } from 'src/app/services/Auth/auth.service';
 
 
@@ -13,7 +12,7 @@ export class RegisterComponent {
   images = [944, 1011, 984].map((n) => `https://picsum.photos/id/${n}/900/500`);
 
 
-  constructor(private builder: FormBuilder, private toastr:ToastrService, private service:AuthService){
+  constructor(private builder: FormBuilder,private service:AuthService){
 
   }
 
@@ -26,14 +25,14 @@ export class RegisterComponent {
   isactive:this.builder.control(false),
   });
 
-  proceedregisteration(){
-    if(this.registerform.valid){
-      this.service.Proceedregister(this.registerform.value).subscribe(res=>{
-        this.toastr.success('Hubungi Admin Untuk Aktivasi','Register Berhasil')
-      });
-    }else{
-      this.toastr.warning('Tolong Masukan Data Yang Valid')
-    }
-  }
+  // proceedregisteration(){
+  //   if(this.registerform.valid){
+  //     this.service.Proceedregister(this.registerform.value).subscribe(res=>{
+  //     alert("asdasd")
+  //     });
+  //   }else{
+  //     alert("djabjbajsf")
+  //   }
+  // }
 
 }

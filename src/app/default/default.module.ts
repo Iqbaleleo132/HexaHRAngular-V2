@@ -5,6 +5,7 @@ import { SharedModule } from '../shared/shared.module';
 import { ModuleModule } from '../module/module.module';
 import { RouterModule } from '@angular/router';
 import { ButtonModule } from 'primeng/button';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 
 
@@ -18,6 +19,7 @@ import { ButtonModule } from 'primeng/button';
     SharedModule,
     ModuleModule,
     RouterModule,
+    HttpClientModule
   ]
 })
 export class DefaultModule { }

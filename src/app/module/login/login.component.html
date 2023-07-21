@@ -8,15 +8,18 @@
                 </div>
         
                 <div class="login-form">
-                    <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter your email">
+                    <form  [formGroup]="loginForm!" (ngSubmit)="proceedlogin()">
+                    <label for="exampleFormControlInput1" class="form-label">Username</label>
+                    <input type="email" class="form-control" id="email" formControlName="email" placeholder="Enter your email">
              
                     <label for="exampleFormControlInput1" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Enter your password">
-        
+                    <input type="password" class="form-control" formControlName="password" id="password" placeholder="Enter your password">
+                    
                     <a href="#" class="text-center">Forgot password</a>
-                    <button class="sign-in">Sign In</button>
+                    <button class="button">Submit</button>
+                </form>
                     <div class="text-center">
+                    
                         
                         <span class="d-inline" style="color: #737373; font-style: normal; font-weight: 400; font-size: 14px; line-height: 21px;">Don’t have an account? <a href="#" class="text-decoration-none d-inline text-black">Sign up for free</a>
                         </span>

@@ -1,8 +1,29 @@
+body{
+    min-height: 100vh;
+}
+
+
 .brand{
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 700;
     color: rgb(11, 63, 158);
 }
 span{
     color: rgb(255, 0, 0);
 }
+
+.navbar {
+    display: flex;
+    list-style: none;
+    
+}
+
+
+
+
+.navbar img {
+    cursor: pointer;
+}
+
+
+

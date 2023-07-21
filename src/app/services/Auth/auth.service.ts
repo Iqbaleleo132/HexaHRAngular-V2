@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 export class AuthService {
 
   constructor(private http:HttpClient) { }
-  apiurl = 'http://192.168.1.29:5000/login'
+  apiurl = 'http://192.168.1.29:5000/users'
 
   GetAll() {
     return this.http.get(this.apiurl)
@@ -16,7 +16,7 @@ export class AuthService {
     return this.http.get(this.apiurl+'/'+code)
   }
 
-  Proceedregister(inputdata:any){
+  proceedlogin(inputdata:any){
     return this.http.post(this.apiurl,inputdata)
 
   }

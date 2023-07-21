@@ -7,17 +7,20 @@
     styleUrls: ['./jabatan.component.scss']
   })
   export class JabatanComponent {
-    data: any[] = [];
+     visible: boolean = false;
 
-  constructor(private http: HttpClient) {}
+  showDialog() {
+      this.visible = true;
+  }
 
-  ngOnInit(): void {
-    const backendUrl = 'http://192.168.1.29:5000/jabatans'; // Ganti <alamat-ip-backend> dengan alamat IP backend dan sesuaikan dengan endpoint yang sesuai
 
-    this.http.get<any[]>(backendUrl)
-      .subscribe(response => {
-        console.log(response)
-        this.data = response;
-    });
+
+  ngOnInit() {
+      
+
+
+  // Fungsi baru ke-3
+  
+
   }
 }

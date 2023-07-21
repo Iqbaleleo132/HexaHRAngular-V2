@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { CardModule } from 'primeng/card';
 
@@ -7,6 +8,18 @@ import { CardModule } from 'primeng/card';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent {
+
+  
+
+    constructor(http: HttpClient){}
+
+
+
+
+
+
+
+
   option: any;
   data: any;
 
@@ -14,8 +27,21 @@ export class DashboardComponent {
 
   items!: string[];
 
+  
+  
+
 
   ngOnInit() {
+
+    
+
+
+
+
+
+
+
+
       const documentStyle = getComputedStyle(document.documentElement);
       const textColor = documentStyle.getPropertyValue('--text-color');
       this.items = Array.from({ length: 1000 }).map((_, i) => `Item #${i}`);

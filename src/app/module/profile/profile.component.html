@@ -1,24 +1,86 @@
-<section class="d-flex justify-content">
-    <div class="sdibear-left w-20 h-100">
-        <div class="sidebar">
-            <div class="profile-info">
-              <!-- Place your profile picture and other profile info here -->
-              <!-- For example: -->
-              <!-- <img src="path_to_profile_picture.jpg" alt="Profile Picture"> -->
-              <!-- <h2>Username</h2> -->
+<section class="">
+  <p-tabView>
+      <p-tabPanel header="Account Setting" >
+        <div class="sdibear-left" >
+         
+          <div class="Account-Detail d-flex align-items-center">
+            <div class="header-user">
+              <img src="https://static.tvtropes.org/pmwiki/pub/images/saul_goodman.jpg" alt="">
+              <p>Saul Pria Baik</p>
             </div>
-            <ul class="menu">
-              <!-- Add your menu items here -->
-              <li><a href="#">Dashboard</a></li>
-              <li><a href="#">Profile Settings</a></li>
-              <li><a href="#">Messages</a></li>
-              <li><a href="#">Logout</a></li>
-            </ul>
+            <div class="button-open-modal">
+            <button (click)="showDialog()" icon="pi pi-pencil" label="Edit User Profile" class="btn btn-primary" > Edit User Profile</button>
           </div>
+            <p-dialog header="Edit Profile" [(visible)]="visible" [modal]="true" [style]="{ width: '95vw' }" [draggable]="false" [resizable]="false">
+              <div class="Content">
+                <div class="hero">  
+                  <div class="Profile-Picture">
+                    <h5>Your Profile Picture</h5>
+                    <img src="https://static.tvtropes.org/pmwiki/pub/images/saul_goodman.jpg" alt="">
+                    <label for="input-file"> Change Picture</label>
+                    <input type="file" accept="image/jpeg, image/png, image/jpg" id="input-file">
+                </div>
+              </div>
+              
+              </div>  
+              <div class="form-wrapper d-flex gap-5">
+              <div class="form-group">
+                  <label for="">Full name :</label>
+                  <input type="text" placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                  <label for="">Email :</label>
+                  <input type="email" placeholder="Enter your email">
+                </div>
+              </div>
+              <div class="form-wrapper d-flex gap-5">
+              <div class="form-group">
+                  <label for="">Username :</label>
+                  <input type="text" placeholder="Please enter your username">
+                </div>
+                <div class="form-group">
+                  <label for="">Phone Number :</label>
+                  <input type="text" placeholder="Please enter your phone number">
+                </div>
+              </div>
+            
+              <div class="form-wrapper d-flex gap-5">
+              <div class="form-group">
+                  <label for="">Bio :</label>     
+                  <textarea rows="5" cols="30" pInputTextarea [autoResize]="true" placeholder="Write your Bio here e.g your hobbies, interests ETC"></textarea>
+                </div>
+              </div>
+              
+              <div class="form-wrapper d-flex">
+              <div class="form-group ">
+                      <Button class="btn" style="background-color: var(--main-color);">Save</Button>
+                      <Button class="btn btn-danger" style="width:90px ;">Reset</Button>
+                 </div>
+              </div>
+              
+            
+            </p-dialog>
+          </div>
+  
           
-    </div>
-    <div class="content-kanan w-50">
-        sbjadjabsd
-    </div>
+
+          
+          
+        </div>
+      </p-tabPanel>
+      <p-tabPanel header="Header II">
+          <p>
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim
+              ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Consectetur, adipisci velit, sed quia non numquam eius modi.
+          </p>
+      </p-tabPanel>
+      <p-tabPanel header="Header III">
+          <p>
+              At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa
+              qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus.
+          </p>
+      </p-tabPanel>
+  </p-tabView>
+
 
 </section>

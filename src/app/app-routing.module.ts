@@ -15,11 +15,11 @@ import { ProfileComponent } from './module/profile/profile.component';
 
 const routes: Routes = [
   {
-    path: 'hexahr-home',
+    path: 'HexaHr',
     component: DefaultComponent,
     children: [
       {
-        path: 'dashboard',
+        path: '',
         component: DashboardComponent
       },
       {

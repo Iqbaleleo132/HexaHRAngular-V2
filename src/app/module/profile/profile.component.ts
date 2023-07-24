@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { MessageService } from 'primeng/api';
+
+
 
 @Component({
   selector: 'app-profile',
@@ -6,5 +9,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./profile.component.scss']
 })
 export class ProfileComponent {
+
+  visible: boolean = false;
+
+  showDialog(){
+    this.visible = true;
+  }
+  
+ 
 
 }

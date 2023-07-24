@@ -1,38 +1,131 @@
-.sidebar {
-    width: 340px;
-    background-color: #f0f0f0;
+*{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.hero{
+  display: flex;
+}
+
+.Profile-Picture{
+width: 400px;
+padding: 4px;
+border-radius: 15px;
+text-align: center;
+}
+
+.Profile-Picture img{
+width: 180px;
+height: 180px;
+border-radius: 50%;
+margin-top: 20px;
+margin-bottom: 30px;
+}
+
+.Profile-Picture label{
+  display: block;
+  width: 200px;
+  background: var(--main-color);
+  color: #fff;
+  padding: 12px;
+  margin: 10px auto;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.Profile-Picture input{
+  display: none;
+}
+
+
+
+.form-group label{
+  display: block;
+  color: #4C535F;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 112.4%; /* 17.984px */
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.form-group input{
+  width: 519px;
+  height: 52px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  border: 1px solid #E0E4EC;
+  background: linear-gradient(0deg, #EDF2F6 0%, #EDF2F6 100%), #FFF;
+}
+
+.form-group input ::placeholder{
+  color: #8D98AA;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 112.4%;
+  padding: 1rem;
+}
+
+.form-group label input{
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  padding-bottom: 15px;
+}
+
+.from-wrapper{
+  display: flex;
+
+
+}
+
+:host ::ng-deep textarea {
+  width: 68rem;
+  background: #E0E4EC;
+}
+
+.form-group button{
+  border-radius: 8px;
+  width: 201px;
+  height: 49px;
+  flex-shrink: 0;
+  margin-top: 1rem;
+  color: white;
+  margin-left: 10px;
+}
+
+.Account-Detail {
+  justify-content: space-between;
+ 
+}
+
+.button-open-modal{
+  justify-content: space-between;
+}
+
+.header-user img{
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  border: 7px solid #4C535F;
+  margin-left: 1rem;
+  }
+  
+  .header-user p{
+   display: inline;
+   margin-left: 1rem;
+   font-size: 25px;
+   
+    }
+
+    .header-user button{
+    margin-left: 5rem;
+    }
+
+
     
-  }
-  
-  .profile-info {
-    text-align: center;
-    padding-bottom: 20px;
-  }
-  
-  .profile-info img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-  }
-  
-  .menu {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .menu li {
-    margin-bottom: 10px;
-  }
-  
-  .menu a {
-    text-decoration: none;
-    color: #333;
-    display: block;
-    padding: 9px;
-  }
-  
-  .menu a:hover {
-    background-color: #ddd;
-    border-radius: 10px;
-  }
-  
+    

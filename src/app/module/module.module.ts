@@ -27,6 +27,9 @@ import { BreadcrumbModule } from 'primeng/breadcrumb';
 import { DropdownModule } from 'primeng/dropdown';
 import { ProfileComponent } from './profile/profile.component';
 import { SplitterModule } from 'primeng/splitter';
+import { FileUploadModule } from 'primeng/fileupload';
+import { InputTextareaModule } from 'primeng/inputtextarea';
+
 
 
 
@@ -64,7 +67,10 @@ import { SplitterModule } from 'primeng/splitter';
     ReactiveFormsModule,
     BreadcrumbModule,
     DropdownModule,
-    SplitterModule
+    SplitterModule,
+    FileUploadModule,
+    InputTextareaModule
+
     
     
     

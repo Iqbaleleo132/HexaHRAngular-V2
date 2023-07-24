@@ -13,7 +13,7 @@ import { AuthService } from 'src/app/services/Auth/auth.service';
 })
 export class LoginComponent implements OnInit {
   images = [944, 1011, 984].map((n) => `https://picsum.photos/id/${n}/900/500`);
-  userdata: any;
+  userdata: any;  
   public loginForm! : FormGroup
   constructor(private formBuilder: FormBuilder, private service:AuthService, private router: Router, private http:HttpClient){}
 
@@ -30,10 +30,12 @@ export class LoginComponent implements OnInit {
   
 
  proceedlogin(): void{
-
+  
   this.http.post('http://192.168.1.29:5000/Login',  this.loginForm.getRawValue(), {withCredentials: true}).subscribe(
     () => 
-      this.router.navigate(['hexahr-home'])
+      this.router.navigate(['HexaHr'])
+      
+      
   );
 
   }

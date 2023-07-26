@@ -11,7 +11,7 @@ export class KaryawanService {
 
   getData(){
     return this.http.get('http://192.168.1.29:5000/karyawans', {withCredentials: true}).subscribe((res:any) =>{
-      this.message = `Hi ${res.nama}`;
+      alert("Ur Login Succesfully");
     },
     err => {
       this.message = 'you are not logged in'

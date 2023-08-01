@@ -1,9 +1,3 @@
-.header-jabatan{
-    font-weight: 550;
-    color: blue;
-    font-size: 25px;
-    height: 18vh;
-}
 .header2{
     margin-top: 5px;
     font-size: 15px;
@@ -14,32 +8,44 @@
 }
 .card-jabatan{
     border: none;
-    
+    height: 10vh;
 }
 ::ng-deep .p-button{
-    background-color: var(--main-color);
-    color: white;
-    margin-bottom: 20px;
+        background-color: var(--main-color);
+        color: white;
+        margin-bottom: 20px;
 }
 .flex-jabatan{
     justify-content: space-between;
-
 }
-.input-jabatan{
+::ng-deep .p-breadcrumb{
     margin-top: 5px;
-    margin-bottom: 10px;
-    justify-content: center;
-    flex: none;
-    width: 50px;
-    
+}  
+.input-jabatan{
+        margin-top: 5px;
+        margin-bottom: 10px;
+        justify-content: center;
+        flex: none;
 }
 .tambah-data-j{
-    background-color: var(--main-color);
+background-color: var(--main-color);
 }
 .btn-submit {
     position: absolute;
     bottom: 0;
     right: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    margin-right: 15px;
 }
+::ng-deep .p-dropdown{
+    width: 80vh;
+}
+.c-1{
+    margin-left: 5px;
+}
+.checkbox{
+    margin-top: 5px;
+}
+
+  
   

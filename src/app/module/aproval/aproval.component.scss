@@ -1,0 +1,43 @@
+::ng-deep .p-card{
+    margin-top: 15px;
+}
+.flex-aproval{
+    justify-content: space-between;
+}
+::ng-deep .p-breadcrumb{
+    margin-top: 5px;
+}  
+.r-1{
+    margin-left: 21vw;
+}
+.radioButton{
+    margin-top: 10px;
+}
+.r-2{
+    margin-left: 14px;
+}
+.label-approve{
+    margin-top: 14px;
+    margin-left: 15px;
+}
+::ng-deep .p-multiselect{
+    margin-left: 15px;
+    margin-top: 5px;
+    display: none;
+    width: 40vh;
+}
+.textarea{
+    margin-left: 15px;
+    margin-top: 5px;
+}
+.btn-submit {
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    margin-bottom: 13px;
+    margin-right: 10px;
+}
+::ng-deep .p-button{
+    background-color: var(--main-color);
+    color: white;
+}

@@ -7,6 +7,8 @@
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
 
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
 :root{
     --main-color:#204683;
     --hover-color: #1B3A6F;

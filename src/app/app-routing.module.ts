@@ -9,6 +9,9 @@ import { LaporabsenComponent } from './module/laporabsen/laporabsen.component';
 import { LoginComponent } from './module/login/login.component';
 import { RegisterComponent } from './module/register/register.component';
 import { ProfileComponent } from './module/profile/profile.component';
+import { CanActivate } from '@angular/router';
+import { AuthGuard } from './auth.guard';
+
 
 
 
@@ -17,6 +20,7 @@ const routes: Routes = [
   {
     path: 'HexaHr',
     component: DefaultComponent,
+    canActivate: [AuthGuard],
     children: [
       {
         path: '',
@@ -44,6 +48,7 @@ const routes: Routes = [
       },
     ]
   },
+  
   
   {
   path: 'login',

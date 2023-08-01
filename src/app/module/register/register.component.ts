@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { AuthService } from 'src/app/services/Auth/auth.service';
+
 
 
 @Component({
@@ -12,7 +12,7 @@ export class RegisterComponent {
   images = [944, 1011, 984].map((n) => `https://picsum.photos/id/${n}/900/500`);
 
 
-  constructor(private builder: FormBuilder,private service:AuthService){
+  constructor(private builder: FormBuilder){
 
   }
 

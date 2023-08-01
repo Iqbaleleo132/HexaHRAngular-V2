@@ -29,6 +29,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { SplitterModule } from 'primeng/splitter';
 import { FileUploadModule } from 'primeng/fileupload';
 import { InputTextareaModule } from 'primeng/inputtextarea';
+import { MultiSelect, MultiSelectModule } from 'primeng/multiselect';
 
 
 
@@ -69,7 +70,8 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
     DropdownModule,
     SplitterModule,
     FileUploadModule,
-    InputTextareaModule
+    InputTextareaModule,
+    MultiSelectModule,
 
     
     

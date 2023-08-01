@@ -10,7 +10,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Card, CardModule } from 'primeng/card';
 import { InputTextModule } from 'primeng/inputtext';
-import {  HttpClientModule  } from '@angular/common/http'
+import { HTTP_INTERCEPTORS, HttpClientModule  } from '@angular/common/http'
+import { AuthInterceptor } from './interceptors/auth.interceptor';
+
 
 
 @NgModule({
@@ -31,7 +33,13 @@ import {  HttpClientModule  } from '@angular/common/http'
     InputTextModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

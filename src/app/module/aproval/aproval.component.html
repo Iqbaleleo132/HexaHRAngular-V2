@@ -1,1 +1,71 @@
-<p>aproval works!</p>
+<p-breadcrumb [model]="items" [home]="home"></p-breadcrumb>  
+  <p-card>
+    <div class="d-flex flex-aproval">
+      <div></div>
+      <p-table
+      class="table"[tableStyle]="{ 'min-width': '60rem' }" [paginator]="true" [rowsPerPageOptions]="[15, 25, 50, 100, 250, 500]"
+      [scrollable]="true"
+      [rows]="15" [resizableColumns]="true" [value]="sampleData">   
+        <ng-template pTemplate="header">
+          <tr>
+            <th style="min-width:10rem">
+              <div class="flex align-item-center">
+                No
+              </div>
+            </th>
+            <th style="min-width:15rem">
+              <div class="flex align-item-center">
+                Nama Karyawan
+              </div>
+            </th>
+            <th style="min-width:15rem">
+              <div class="flex align-item-center">
+                Jenis Pengajuan
+              </div>
+            </th>
+            <th style="min-width:15rem">
+              <div class="flex align-item-center">
+                Tanggal Pengajuan
+              </div>
+            </th>
+            <th style="min-width:10rem">
+              <div class="flex align-item-center">
+                Aksi
+              </div>
+            </th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-product>
+          <tr>
+            <td>{{ product.no }}</td>
+            <td>{{ product.namakaryawan }}</td>
+            <td>{{ product.jenispengajuan }}</td>
+            <td>{{ product.tanggalpengajuan }}</td>
+            <td>
+              <i class="far fa-eye" (click)="showDialog()"></i>
+                <p-dialog header="Request" [(visible)]="visible" [modal]="true" [style]="{ width: '40vw', height: '30vw' }" [draggable]="false" [resizable]="false">
+                    <div class="radioButton">
+                        <p-radioButton class="r-2" name="pizza" value="approve" [(ngModel)]="ingredient" inputId="ingredient1"></p-radioButton>
+                        <label for="ingredient1" class="ml-2">Approve</label>
+                        <p-radioButton class="r-1" name="pizza" value="decline" [(ngModel)]="ingredient" inputId="ingredient2"></p-radioButton>
+                        <label for="ingredient2" class="ml-2">Decline</label>
+                    </div>
+                    <label class="label-approve" htmlFor="input-approval">Nama Pengganti :</label>  
+                    <div class="flex justify-content-center">
+                      <p-multiSelect [options]="cities" [(ngModel)]="selectedCities" optionLabel="name"></p-multiSelect>
+                  </div>         
+                    <label class="label-approve" htmlFor="input-approval">Catatan :</label>  
+                    <div class="flex justify-content-center">
+                      <textarea class="textarea" rows="4" cols="25" pInputTextarea [(ngModel)]="value"></textarea>
+                  </div>
+                  <div>
+                    <p-button type="button" (click)="show()" label="Submit" class="btn-submit"></p-button>
+                </div>
+                  </p-dialog>
+                  <p-toast [breakpoints]="{'920px': {width: '100%', right: '0', left: '0'}}"></p-toast>
+              </td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+  </p-card>

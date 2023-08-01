@@ -11,10 +11,13 @@ export class HeaderComponent implements OnInit {
 
   isMenuOpened: boolean = false;
 
-  toggleMenu(): void {
-    this.isMenuOpened = !this.isMenuOpened;
-  }
+  showDropdown: boolean = false;
 
+  showNotifications: boolean = false;
+
+  toggleNotifications() {
+    this.showNotifications = !this.showNotifications;
+  }
   ngOnInit(): void {
     
     

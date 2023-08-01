@@ -1,8 +1,9 @@
 import { Component,OnInit } from '@angular/core';
 import { DecimalPipe, NgFor } from '@angular/common';
-import { KaryawanService } from 'src/app/services/Karyawan/karyawan.service';
+
 import { take } from 'rxjs';
 import { Table } from 'primeng/table';
+import { HttpClient } from '@angular/common/http';
 
 interface Karyawan {
 	id: number;
@@ -19,7 +20,7 @@ interface Karyawan {
   styleUrls: ['./karyawan.component.scss']
 })
 export class KaryawanComponent implements OnInit {
-
+  karyawan: Karyawan [] = [];
   loading: boolean = true;
 
   clear(table: Table ) {
@@ -32,15 +33,23 @@ showDialog() {
     this.visible = true;
 }
   
-index: number | undefined
-  karyawan:any
-  constructor( private user:KaryawanService) {
+  index: number | undefined
+  constructor(private http: HttpClient) {
   }
-  ngOnInit(): void{
-    this.user.getData()
-      
-  }
- 
+  ngOnInit(){
+    this.http
+        .get<Karyawan[]>('http://192.168.1.29:5000/karyawans', { withCredentials: true })
+        .subscribe(
+            (res: Karyawan[]) => {
+                this.karyawan = res;
+                this.loading = true;
+            },
+            (error) => {
+                console.error('Error fetching data:', error);
+                this.loading = false;
+            }
+        );
+}
 
 
   }

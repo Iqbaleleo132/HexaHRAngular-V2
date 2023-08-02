@@ -50,11 +50,6 @@ export class DashboardComponent {
 
     }
 
-    
-
-
-
-
   option: any;
   data: any;
 
@@ -62,17 +57,18 @@ export class DashboardComponent {
 
   items!: string[];
 
-  
-
   userName = ''; // Add a property to store the user's name
 
 
   ngOnInit(): void {
-    this.http.get<ServerResponse>('http://192.168.1.29:5000/users',{withCredentials: true}).subscribe(
-        (res: ServerResponse) => {
+
+
+
+    this.http.get('http://192.168.1.29:5000/users',{withCredentials: true}).subscribe(
+        (res: any) => {
+            localStorage.getItem('token')
             this.userName = res.name
             this.message = `Halo Selamat Bekerja Kembali, ${this.userName}`;
-          
         }
     )
 

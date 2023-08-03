@@ -12,6 +12,7 @@ import { Card, CardModule } from 'primeng/card';
 import { InputTextModule } from 'primeng/inputtext';
 import { HTTP_INTERCEPTORS, HttpClientModule  } from '@angular/common/http'
 import { AuthInterceptor } from './interceptors/auth.interceptor';
+import { JwtModule } from '@auth0/angular-jwt';
 
 
 
@@ -32,7 +33,17 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
     CardModule,
     InputTextModule,
     HttpClientModule,
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: () => localStorage.getItem('token')
+      }
+    })
   ],
+
+  // exports: [
+  //   JwtModule
+  // ],
+
   providers: [
     {
       provide: HTTP_INTERCEPTORS,

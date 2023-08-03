@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { JwtHelperService } from '@auth0/angular-jwt';
 import { CardModule } from 'primeng/card';
 import { AuthInterceptor } from 'src/app/interceptors/auth.interceptor';
 
@@ -16,8 +17,9 @@ interface ServerResponse {
 export class DashboardComponent {
 
     message = '';
+    
 
-    constructor(private http: HttpClient){
+    constructor(private http: HttpClient, private jwtHelper: JwtHelperService){
         
 
         const documentStyle = getComputedStyle(document.documentElement);
@@ -66,10 +68,16 @@ export class DashboardComponent {
 
     this.http.get('http://192.168.1.29:5000/users',{withCredentials: true}).subscribe(
         (res: any) => {
-            localStorage.getItem('token')
-            this.userName = res.name
-            this.message = `Halo Selamat Bekerja Kembali, ${this.userName}`;
+           const token = localStorage.getItem('token')
+           if(token !== null){
+            const decodedToken = this.jwtHelper.decodeToken(token);
+            this.userName = decodedToken.name;
         }
+    },
+    (error) => {
+        console.error('Error fetching user data:', error);
+    }
+
     )
 
 

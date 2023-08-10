@@ -5,22 +5,22 @@
          
           <div class="Account-Detail d-flex align-items-center">
             <div class="header-user">
-              <img src="https://static.tvtropes.org/pmwiki/pub/images/saul_goodman.jpg" alt="">
-              <p>Saul Pria Baik</p>
+              <img src="{{userPpKaryawans}}" alt="">
+              <p>{{userName}}</p>
             </div>
             <div class="button-open-modal">
               <div class="form-wrapper d-flex gap-5">
                 <div class="form-group">
                     <label for="">Display Name :</label>
-                    Saul Pria Baik
+                    {{userName}}
                   </div>
                   <div class="form-group">
                     <label for="">Email :</label>
-                    <p>Iqbal@gmail.com  </p>
+                    <p>{{userEmail}}  </p>
                   </div>
                   <div class="form-group">
                     <label for="">Phone Number :</label>
-                    <p>081314431109  </p>
+                    <p>{{userPhoneNum}}  </p>
                   </div>
                   <div class="form-group">
                     <button (click)="showDialog()" icon="pi pi-pencil" label="Edit User Profile" class="btn btn-primary" > Edit User Profile</button>
@@ -66,8 +66,10 @@
           </div>
           
           <div class="content-users">
-            <label for="">Bio</label>     
+            <label for="">Bio</label>    
+             
           <div class="card w-100 container" style="height: 250px; padding: auto;">
+            {{userBio}}
             <div class="form-wrapper d-flex gap-5">
             <div class="form-group">
                 

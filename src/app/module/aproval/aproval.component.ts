@@ -26,37 +26,16 @@ export class AprovalComponent implements OnInit {
   selectedCities!: City[];
   value!: string;
   ingredient!: string;
-  sampleData = [
-    {
-      no: 1,
-      namakaryawan: 'John Doe',
-      jenispengajuan: 'Cuti',
-      tanggalpengajuan: '2023-07-30',
-      action: 'View',
-    },
-    {
-      no: 2,
-      namakaryawan: 'Jane Smith',
-      jenispengajuan: 'Izin',
-      tanggalpengajuan: '2023-07-28',
-      action: 'Edit',
-    },
-  ];
+  
   items: MenuItem[] | undefined;
     home: MenuItem | undefined;
    
   ngOnInit() {
+
       this.items = [{ label: 'Master Data' }, {label:'Aproval Izin/Lembur', routerLink:'/hexahr-home/aproval'}];
+      this.home = { icon: 'pi pi-home', routerLink: '/hexahr-home/dashboard' };
 
-        this.home = { icon: 'pi pi-home', routerLink: '/hexahr-home/dashboard' };
-
-        this.cities = [
-          {name: 'Muhammad Agus', code: 'MA'},
-          {name: 'Ronie', code: 'RN'},
-          {name: 'Londi', code: 'LDI'},
-          {name: 'Bulbul', code: 'BL'},
-          {name: 'Paris', code: 'PRS'}
-      ];  
+     
   }
   hideDialog() {
     this.visible = false;

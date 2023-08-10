@@ -15,7 +15,7 @@ import { JwtHelperService } from '@auth0/angular-jwt';
     styleUrls: ['./login.component.scss']
   })
   export class LoginComponent implements OnInit {
-    images = [944, 1011, 984].map((n) => `https://picsum.photos/id/${n}/900/500`);
+    images = [347, 111,14].map((n) => `https://picsum.photos/id/${n}/900/500`);
     userdata: any;  
     public loginForm! : FormGroup
     constructor(private formBuilder: FormBuilder, private router: Router, private http:HttpClient, private jwtHelper: JwtHelperService){}

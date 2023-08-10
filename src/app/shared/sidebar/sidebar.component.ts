@@ -26,7 +26,6 @@ export class SidebarComponent {
       () => {
       const logToken = localStorage.getItem('token')
       if(logToken !== null && !this.jwtHelper.isTokenExpired(logToken)) {
-
         this.http.delete('http://192.168.1.29:5000/logout', {withCredentials:true}).subscribe(
           () => {
             localStorage.removeItem('token')

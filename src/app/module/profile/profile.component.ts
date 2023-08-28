@@ -18,7 +18,7 @@ export class ProfileComponent {
   constructor(private http: HttpClient, private jwtHelper: JwtHelperService) {}
 
   ngOnInit(): void {
-    this.http.get('http://192.168.1.29:5000/users', { withCredentials: true }).subscribe(
+    this.http.get('http://192.168.1.7:5000/users', { withCredentials: true }).subscribe(
       (res: any) => {
         const token = localStorage.getItem('token');
         if (token !== null) {
@@ -30,7 +30,7 @@ export class ProfileComponent {
           this.userBio = decodedToken.bio;
 
           // Call the second endpoint
-          this.http.get('http://192.168.1.29:5000/karyawans', { withCredentials: true }).subscribe(
+          this.http.get('http://192.168.1.7:5000/karyawans', { withCredentials: true }).subscribe(
             (otherRes: any) => {
               const tokenKaryawans = localStorage.getItem('token')
               if(tokenKaryawans !== null){

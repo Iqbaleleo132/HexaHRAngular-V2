@@ -32,7 +32,7 @@ import { JwtHelperService } from '@auth0/angular-jwt';
     
 
   proceedlogin(){
-    return this.http.post('http://192.168.1.29:5000/Login',this.loginForm.getRawValue(), {withCredentials: true}).subscribe(
+    return this.http.post('http://192.168.1.7:5000/Login',this.loginForm.getRawValue(), {withCredentials: true}).subscribe(
       (res: any) => {
 
         const token = res.accessToken;

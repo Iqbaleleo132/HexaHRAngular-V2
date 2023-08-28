@@ -17,35 +17,36 @@ export class SidebarComponent {
 
   isMenuOpened: boolean = false;
 
+  isAdmin: boolean = false;
+
   toggleMenu(): void {
     this.isMenuOpened = !this.isMenuOpened;
   }
 
-  logOut(){
-    this.http.delete('http://192.168.1.29:5000/logout',{withCredentials: true}).subscribe(
-      () => {
-      const logToken = localStorage.getItem('token')
-      if(logToken !== null && !this.jwtHelper.isTokenExpired(logToken)) {
-        this.http.delete('http://192.168.1.29:5000/logout', {withCredentials:true}).subscribe(
-          () => {
-            localStorage.removeItem('token')
-            this.router.navigate(['login'])
-          },
-          (error) => {
-            console.error('Logout Failed', error)
-            alert('Logout failed, Please try again')
-          }
-          
-          
-          )
-      }
-      
-      },
-      (error) => {
-        console.error('Logout Failed:', error);
-        alert('Logout failed. please try again')
-      }
-    )
+  ngOnInit() {
+    const logToken = localStorage.getItem('token');
+    if(logToken !== null && !this.jwtHelper.isTokenExpired(logToken)) {
+      // Assuming you have a way to determine admin status, for example, based on roles in the token
+      const decodedToken = this.jwtHelper.decodeToken(logToken);
+      this.isAdmin = decodedToken.role === 'admin'; // Adjust the role property accordingly
+    }
+  }
+  
+
+  logOut() {
+    const logToken = localStorage.getItem('token');
+    if (logToken !== null && !this.jwtHelper.isTokenExpired(logToken)) {
+      this.http.delete('http://192.168.1.7:5000/logout', { withCredentials: true }).subscribe(
+        () => {
+          localStorage.removeItem('token');
+          this.router.navigate(['login']);
+        },
+        (error) => {
+          console.error('Logout Failed', error);
+          alert('Logout failed, Please try again');
+        }
+      );
+    }
   }
   
 }

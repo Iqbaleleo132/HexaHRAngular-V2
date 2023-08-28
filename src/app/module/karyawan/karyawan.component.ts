@@ -38,7 +38,7 @@ showDialog() {
   }
   ngOnInit(){
     this.http
-        .get<Karyawan[]>('http://192.168.1.29:5000/karyawans', { withCredentials: true })
+        .get<Karyawan[]>('http://192.168.1.7:5000/karyawans', { withCredentials: true })
         .subscribe(
             (res: Karyawan[]) => {
                 this.karyawan = res;
